@@ -7,7 +7,9 @@ import java.util.List;
 import com.example.apaeasy.Ball.BallState;
 
 public class ConcreteNineBallScoringSystem extends AbstractScoringSystem{
-
+	
+		public ConcreteNineBallScoringSystem(){}
+	
 		public int getScore(List<Ball> ballList)
 		{
 			int score = 0;

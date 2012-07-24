@@ -18,13 +18,18 @@ public class Game {
 	private int innings = 0;
 	
 	// Initializes the game
-	Game(AbstractScoringSystem scoringSystem, List<Ball> ballList, Queue<Player> playerQueue, Player lagWinnner)
+	Game(AbstractScoringSystem scoringSystem,Queue<Player> playerQueue)
 	{
 		this.scoringSystem = scoringSystem;
 		this.ballList = scoringSystem.getInitialBallSet();
 		this.playerQueue = playerQueue;
 		this.initialBreaker = playerQueue.peek();
-		this.lagWinner = lagWinner;
+		this.lagWinner = null;
+	}
+	
+	public void addPlayer(Player p)
+	{
+		this.playerQueue.add(p);
 	}
 	
 	public void cycleTurn()
